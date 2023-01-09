@@ -36,6 +36,10 @@ jobs:
         with:
           nix_path: nixpkgs=https://github.com/NixOS/nixpkgs/archive/0c9aadc8eff6daaa5149d2df9e6c49baaf44161c.tar.gz
           extra_nix_config: "system-features = nixos-test benchmark big-parallel kvm"
+          
+      - name: Update website input
+        if: github.event.action == 'site_updated'
+        run: nix flake lock --update-input website-src
         
       - name: HashiCorp - Setup Terraform
       # You may pin to the exact commit or the version.

@@ -31,4 +31,5 @@
   };
   environment.systemPackages = [ inputs.website-src.packages.x86_64-linux.default ];
   environment.etc."ssh/authenticated_origin_pull_ca.pem".text = builtins.readFile ./authenticated_origin_pull_ca.pem;
+  users.users.nginx.extraGroups = [ "keys" ];
 }

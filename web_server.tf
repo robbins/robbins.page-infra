@@ -49,4 +49,8 @@ module "deploy_nixos" {
   build_on_target = false
   ssh_private_key = fileexists(var.INSTANCE_SSH_KEY) == true ? file(var.INSTANCE_SSH_KEY) : var.INSTANCE_SSH_KEY
   ssh_agent = false
+  keys = {
+    "robbins.page.pem" = fileexists(var.ROBBINS_PAGE_PEM) == true ? file(var.ROBBINS_PAGE_PEM) : var.ROBBINS_PAGE_PEM
+    "robbins.page.key" = fileexists(var.ROBBINS_PAGE_KEY) == true ? file(var.ROBBINS_PAGE_KEY) : var.ROBBINS_PAGE_KEY
+  }
 }

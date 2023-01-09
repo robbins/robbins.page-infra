@@ -1,6 +1,15 @@
 { config, lib, pkgs, inputs, ... }: {
   imports = [ "${inputs.nixpkgs-unstable}/nixos/modules/virtualisation/google-compute-image.nix" ];
 
+  age.secrets.cloudflare-api-token.file = ./secrets/cloudflare-api-token.age;
+
+  services.openssh.hostKeys = [
+    {
+      path = "/etc/ssh/ssh_host_ed25519_key";
+      type = "ed25519";
+    }
+  ];
+
   nixpkgs.hostPlatform = "x86_64-linux";
   system.stateVersion = "23.05";
   nix = {
@@ -32,4 +41,10 @@
   environment.systemPackages = [ inputs.website-src.packages.x86_64-linux.default ];
   environment.etc."ssh/authenticated_origin_pull_ca.pem".text = builtins.readFile ./authenticated_origin_pull_ca.pem;
   users.users.nginx.extraGroups = [ "keys" ];
+
+  services.cloudflare-dyndns = {
+    enable = true;
+    domains = [ "robbins.page" "www.robbins.page" ];
+    apiTokenFile = config.age.secrets.cloudflare-api-token.path;
+  };
 }

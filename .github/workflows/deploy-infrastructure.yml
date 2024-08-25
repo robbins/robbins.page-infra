@@ -39,7 +39,7 @@ jobs:
           
       - name: Update website input
         if: github.event.action == 'site_updated'
-        run: nix flake lock --update-input website-src
+        run: nix flake update website-src --commit-lock-file
         
       - name: HashiCorp - Setup Terraform
       # You may pin to the exact commit or the version.

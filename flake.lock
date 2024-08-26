@@ -20,19 +20,19 @@
         "type": "github"
       }
     },
-    "hermit-zola": {
+    "apollo-zola": {
       "flake": false,
       "locked": {
-        "lastModified": 1649343104,
-        "narHash": "sha256-tiry4rMOnduQ2JtnpgxRqBsMLICr7JuxaMlONGfwSpA=",
-        "owner": "VersBinarii",
-        "repo": "hermit_zola",
-        "rev": "36009d83123a83ca2a06af36bbc01a6d4bd10ae6",
+        "lastModified": 1724709229,
+        "narHash": "sha256-C7tzJQZt62ETlUjnp9zVnUAAI7q8TdiIXnMWWbBL4ac=",
+        "owner": "robbins",
+        "repo": "apollo-custom",
+        "rev": "fca58065a72bdfe49582fc450551592a68a33f5a",
         "type": "github"
       },
       "original": {
-        "owner": "VersBinarii",
-        "repo": "hermit_zola",
+        "owner": "robbins",
+        "repo": "apollo-custom",
         "type": "github"
       }
     },
@@ -61,17 +61,17 @@
     },
     "website-src": {
       "inputs": {
-        "hermit-zola": "hermit-zola",
+        "apollo-zola": "apollo-zola",
         "nixpkgs": [
           "nixpkgs-unstable"
         ]
       },
       "locked": {
-        "lastModified": 1672908229,
-        "narHash": "sha256-mvTNgohILCEockWo1GCGiHDD82j+prtWqPvI3LfrMNM=",
+        "lastModified": 1724712044,
+        "narHash": "sha256-i+FdhRhe00/zCIO5RudC9BXnU20zuV+oQRC39XyKQ34=",
         "owner": "robbins",
         "repo": "robbins.page-site",
-        "rev": "0a734934b6a18e6b0913fda11ac1a63530df10c6",
+        "rev": "24859f789064a2b464bf9dc394e466381ecabd8c",
         "type": "github"
       },
       "original": {

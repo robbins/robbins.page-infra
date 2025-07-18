@@ -13,7 +13,7 @@
   nixpkgs.hostPlatform = "x86_64-linux";
   system.stateVersion = "23.05";
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nix;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';

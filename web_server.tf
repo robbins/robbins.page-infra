@@ -41,13 +41,14 @@ resource "google_compute_firewall" "firewall_rules" {
 }
 
 module "deploy_nixos" {
-  source = "git::https://github.com/robbins/terraform-nixos.git//deploy_nixos?ref=8f00bdaf514c144e2a75b3e4e2ea536da8c813db"
+  source = "git::https://github.com/robbins/terraform-nixos.git//deploy_nixos?ref=c12f5c820fbbfe3a11513cb4e130d20fabdb9ecc"
   flake = true
   nixos_config = "robbins-page-webserver"
   target_host = google_compute_instance.robbins-page-webserver.network_interface[0].access_config[0].nat_ip
   target_user = "nejrobbins_gmail_com"
   build_on_target = false
   ssh_private_key = var.INSTANCE_SSH_KEY
+  nix_signing_private_key = var.NIX_SIGNING_KEY
   ssh_agent = false
   keys = {
     "robbins.page.pem" = fileexists(var.ROBBINS_PAGE_PEM) == true ? file(var.ROBBINS_PAGE_PEM) : var.ROBBINS_PAGE_PEM

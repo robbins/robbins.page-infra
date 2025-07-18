@@ -1,7 +1,7 @@
 { config, lib, pkgs, inputs, ... }: {
   imports = [ "${inputs.nixpkgs-unstable}/nixos/modules/virtualisation/google-compute-image.nix" ];
 
-  age.secrets.cloudflare-api-token.file = ./secrets/cloudflare-api-token.age;
+  #age.secrets.cloudflare-api-token.file = ./secrets/cloudflare-api-token.age;
 
   services.openssh.hostKeys = [
     {
@@ -43,8 +43,8 @@
   users.users.nginx.extraGroups = [ "keys" ];
 
   services.cloudflare-dyndns = {
-    enable = true;
+    enable = false;
     domains = [ "robbins.page" "www.robbins.page" ];
-    apiTokenFile = config.age.secrets.cloudflare-api-token.path;
+    #apiTokenFile = config.age.secrets.cloudflare-api-token.path;
   };
 }

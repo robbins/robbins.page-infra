@@ -47,7 +47,7 @@ module "deploy_nixos" {
   target_host = google_compute_instance.robbins-page-webserver.network_interface[0].access_config[0].nat_ip
   target_user = "nejrobbins_gmail_com"
   build_on_target = false
-  ssh_private_key = fileexists(var.INSTANCE_SSH_KEY) == true ? file(var.INSTANCE_SSH_KEY) : var.INSTANCE_SSH_KEY
+  ssh_private_key = var.INSTANCE_SSH_KEY
   ssh_agent = false
   keys = {
     "robbins.page.pem" = fileexists(var.ROBBINS_PAGE_PEM) == true ? file(var.ROBBINS_PAGE_PEM) : var.ROBBINS_PAGE_PEM

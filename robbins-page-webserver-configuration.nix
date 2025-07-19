@@ -47,4 +47,10 @@
     domains = [ "robbins.page" "www.robbins.page" ];
     apiTokenFile = config.age.secrets.cloudflare-api-token.path;
   };
+
+  security.pam.services.sudo = {
+    makeHomeDir = true;
+    googleOsLoginAccountVerification = true;
+    googleOsLoginAuthentication = true;
+  };
 }

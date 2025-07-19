@@ -26,7 +26,11 @@
     nixosConfigurations = {
       robbins-page-webserver = nixpkgs-unstable.lib.nixosSystem {
         specialArgs = { inherit inputs; };
-        modules = [ ./robbins-page-webserver-configuration.nix inputs.agenix.nixosModule ];
+          modules = [ 
+            ./robbins-page-webserver-configuration.nix
+            inputs.agenix.nixosModule
+            "${nixpkgs-unstable}/nixos/modules/virtualisation/google-compute-image.nix"
+          ];
       };
     };
   };

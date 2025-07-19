@@ -1,6 +1,4 @@
 { config, lib, pkgs, inputs, ... }: {
-  imports = [ "${inputs.nixpkgs-unstable}/nixos/modules/virtualisation/google-compute-image.nix" ];
-
   age.secrets.cloudflare-api-token.file = ./secrets/cloudflare-api-token.age;
 
   services.openssh.hostKeys = [

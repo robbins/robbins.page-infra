@@ -1,5 +1,5 @@
 { config, lib, pkgs, inputs, ... }: {
-  age.secrets.cloudflare-api-token.file = ./secrets/cloudflare-api-token.age;
+  #age.secrets.cloudflare-api-token.file = ./secrets/cloudflare-api-token.age;
 
   services.openssh.hostKeys = [
     {
@@ -18,8 +18,8 @@
     settings = {
       auto-optimise-store = true;
       trusted-users = [ "nejrobbins_gmail_com" ];
+      trusted-public-keys = [ "robbins-page-deploy:w0blTbOHTQkwfbYRNCB1pv+63HeAcFcnjAFdfmAZv4o=" ];
     };
-    optimise.automatic = true;
     gc.automatic = true;
   };
 
@@ -41,9 +41,9 @@
   users.users.nginx.extraGroups = [ "keys" ];
 
   services.cloudflare-dyndns = {
-    enable = true;
+    enable = false;
     domains = [ "robbins.page" "www.robbins.page" ];
-    apiTokenFile = config.age.secrets.cloudflare-api-token.path;
+    #apiTokenFile = config.age.secrets.cloudflare-api-token.path;
   };
 
   services.nscd.enableNsncd = false;

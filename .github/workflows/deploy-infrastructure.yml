@@ -14,8 +14,6 @@ on:
 env:
  TF_VAR_ACCOUNT_JSON: ${{ secrets.TF_VAR_ACCOUNT_JSON }}
  TF_VAR_INSTANCE_SSH_KEY: ${{ secrets.TF_VAR_INSTANCE_SSH_KEY }}
- TF_VAR_ROBBINS_PAGE_PEM: ${{ secrets.TF_VAR_ROBBINS_PAGE_PEM }}
- TF_VAR_ROBBINS_PAGE_KEY: ${{ secrets.TF_VAR_ROBBINS_PAGE_KEY }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

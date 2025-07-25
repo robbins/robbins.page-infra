@@ -1,8 +1,9 @@
 # Secrets
 variable "ACCOUNT_JSON" {}
 variable "INSTANCE_SSH_KEY" {}
-variable "ROBBINS_PAGE_PEM" {}
-variable "ROBBINS_PAGE_KEY" {}
+#variable "NIX_SIGNING_KEY" {}
+#variable "ROBBINS_PAGE_PEM" {}
+#variable "ROBBINS_PAGE_KEY" {}
 
 variable "project" {
   default = "personal-robbins-website-prod"

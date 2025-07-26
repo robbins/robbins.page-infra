@@ -76,7 +76,7 @@ module "nixos" {
     # sure that the firewall and security group permit outbound connections.
   ]
 
-  ssh_options = "-o StrictHostKeyChecking=accept-new -o ControlMaster=no -t"
+  ssh_options = "-o StrictHostKeyChecking=accept-new -o ControlMaster=no -t -i /home/runner/.ssh/key"
 
   depends_on = [ null_resource.example ]
 }

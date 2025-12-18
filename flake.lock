@@ -23,22 +23,6 @@
         "type": "github"
       }
     },
-    "apollo-zola": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1724709229,
-        "narHash": "sha256-C7tzJQZt62ETlUjnp9zVnUAAI7q8TdiIXnMWWbBL4ac=",
-        "owner": "robbins",
-        "repo": "apollo-custom",
-        "rev": "fca58065a72bdfe49582fc450551592a68a33f5a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "robbins",
-        "repo": "apollo-custom",
-        "type": "github"
-      }
-    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -126,6 +110,22 @@
         "website-src": "website-src"
       }
     },
+    "serene-zola": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1760798732,
+        "narHash": "sha256-AZBzLp3gWcufvDIj3Ra87zw3M3hFUz8SEF08tjEq4VQ=",
+        "owner": "isunjn",
+        "repo": "serene",
+        "rev": "d13dc8def6257dadd911bc018699835b51c50951",
+        "type": "github"
+      },
+      "original": {
+        "owner": "isunjn",
+        "repo": "serene",
+        "type": "github"
+      }
+    },
     "systems": {
       "locked": {
         "lastModified": 1681028828,
@@ -143,17 +143,17 @@
     },
     "website-src": {
       "inputs": {
-        "apollo-zola": "apollo-zola",
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "serene-zola": "serene-zola"
       },
       "locked": {
-        "lastModified": 1753491870,
-        "narHash": "sha256-uw/JWaL8KzFRIkR5EK/DIUNcsWS6Kz4CP84YNgvrMj8=",
+        "lastModified": 1766029124,
+        "narHash": "sha256-L6tU/yH4Rgjw0vgZoZcJlo98M11aLdTGidnjUKwcpZo=",
         "owner": "robbins",
         "repo": "robbins.page-site",
-        "rev": "4ffc549dc2bd34a2622dd143e7edefd56adf07b3",
+        "rev": "68037572e12a4c669e58269a4074842f1a740bb4",
         "type": "github"
       },
       "original": {

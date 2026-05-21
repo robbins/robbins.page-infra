@@ -149,11 +149,11 @@
         "serene-zola": "serene-zola"
       },
       "locked": {
-        "lastModified": 1766087537,
-        "narHash": "sha256-57nyY1VvDl4JlsSypR2+ZtRAyFqLH5bNxWTJgcJOGwA=",
+        "lastModified": 1779407841,
+        "narHash": "sha256-f+rk3GW48wCExH/M1a/Aj1ThUOPssWWLnEwE7jOENao=",
         "owner": "robbins",
         "repo": "robbins.page-site",
-        "rev": "e8ddc74ab2c32152428044f2a8d93c49e4542245",
+        "rev": "bf7185eccb93b2205e450bd7e37379d7f4c59fc4",
         "type": "github"
       },
       "original": {
